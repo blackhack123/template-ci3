@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Usuario extends CI_Controller {
 
 
 	function __construct(){
@@ -10,12 +10,12 @@ class Home extends CI_Controller {
 		  redirect('login');
 		}
 	}
-	
+
 	public function index()
 	{
 		$this->load->view('header');
 		$this->load->view('menu');
-		$this->load->view('home/home');
+		$this->load->view('usuarios/usuario');
 		$this->load->view('footer');
 		
 	}

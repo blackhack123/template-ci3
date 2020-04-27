@@ -35,21 +35,21 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <img src="<?php echo base_url('assets/img/logogadma.jpg');?>"  width="150" heigth="150" class="center-block img-responsive">
-    <!--
-    <p class="login-box-msg">Iniciar Sesión</p>
-    -->
-    <form action="#" method="post" autocomplete="off">
+    
+    <?php echo $this->session->flashdata('msg');?>
+    
+    <form action="<?php echo base_url('login/auth');?>" method="post" autocomplete="off">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Usuario" id="usuario" name="usuario">
+        <input type="text" class="form-control" placeholder="Usuario" id="usuario" name="usuario" required="required">
         <span class="fa  fa-user fa-lg form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Clave" id="clave" name="clave">
+        <input type="password" class="form-control" placeholder="Clave" id="clave" name="clave" required="required">
         <span class="fa  fa-lock fa-lg form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <a href="<?php echo base_url('home'); ?>" class="btn btn-primary btn-block btn-flat">Iniciar Sesión</a>
+          <button class="btn btn-primary btn-block btn-flat" type="submit">Iniciar Sesión</button>
         </div>
       </div>
     </form>
